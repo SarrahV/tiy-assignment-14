@@ -5,8 +5,8 @@ var declare      = require("gulp-declare");
 var concat       = require("gulp-concat");
 var less         = require("gulp-less");
 
-//  var templatePath = "./js/templates/**/*.hbs"; 
-//  var lessPath     = "./less/**/*.less"; 
+var templatePath = "./js/templates/**/*.hbs"; 
+var lessPath     = "./less/**/*.less"; 
 
 
 gulp.task("templates", function() {
