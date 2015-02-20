@@ -44,4 +44,6 @@ gulp.task("templates", function() {
 
   });
 
+  gulp.task("default", ["templates", "less"]);
+
 
