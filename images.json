@@ -1,0 +1,105 @@
+[{
+  "album": "My Buick",
+  "photo": "images/buick1.jpg",
+  "description": "Side view. I need to put the original 1963 wheels back on."
+},{
+  "album": "My Buick",
+  "photo": "images/buick2.jpg",
+  "description": "Grill shot. This is a 1965 modified grill, will be replacing with 1963 original grill."
+},{
+  "album": "My Buick",
+  "photo": "images/buick3.jpg",
+  "description": "No work needed here!"
+},{
+  "album": "My Buick",
+  "photo": "images/buick4.jpg",
+  "description": "I love the lines on this car. It is a work of art."
+},{
+  "album": "Max",
+  "photo": "images/max1.jpg",
+  "description": "My youngest son Max. Around a year old in an outfit his babushka sent from Russia."
+},{
+  "album": "Max",
+  "photo": "images/max2.jpg",
+  "description": "Max at 3 months"
+},{
+  "album": "Max",
+  "photo": "images/max3.jpg",
+  "description": "Max will sleep anywhere."
+},{
+  "album": "Max",
+  "photo": "images/max4.jpg",
+  "description": "Yeah..."
+},{
+  "album": "Ni",
+  "photo": "images/ni1.jpg",
+  "description": "My oldest son Ni. He is always making faces"
+},{
+  "album": "Ni",
+  "photo": "images/ni2.jpg",
+  "description": "My oldest son Ni at 7 years old."
+},{
+  "album": "Ni",
+  "photo": "images/ni3.jpg",
+  "description": "Hahaha...I love taking pictures of them sleeping"
+},{
+  "album": "ni-max",
+  "photo": "images/ni-max1.jpg",
+  "description": "Max graduating from preschool. He always looks up to his brother"
+},{
+  "album": "ni-max",
+  "photo": "images/ni-max2.jpg",
+  "description": "The boys at 3 and 7"
+},{
+   "album": "ni-max",
+   "photo": "images/ni-max3.jpg",
+   "description": "Dorky school photos"
+},{
+   "album": "pepper",
+   "photo": "images/pepper1.jpg",
+   "description": "Dorky school photos"
+},{
+   "album": "pepper",
+   "photo": "images/pepper1.jpg",
+   "description": "My Great Dane Pepper"
+},{
+   "album": "pepper",
+   "photo": "images/pepper2.jpg",
+   "description": "Pepper likes to bite her nails"
+},{
+   "album": "pepper",
+   "photo": "images/pepper3.jpg",
+   "description": "Long legs!"
+},{
+   "album": "pepper",
+   "photo": "images/pepper4.jpg",
+   "description": "Dreamy"
+},{
+   "album": "pepper",
+   "photo": "images/pepper5.jpg",
+   "description": "Hard to remember either of them being this small"
+},{
+   "album": "pepper",
+   "photo": "images/pepper6.jpg",
+   "description": "Lazy"
+},{
+   "album": "travel",
+   "photo": "images/travel1.jpg",
+   "description": "Flight from Auckland to Wellington NZ"
+},{
+   "album": "travel",
+   "photo": "images/travel2.jpg",
+   "description": "Hindu temple in Atlanta"
+},{
+  "album": "travel",
+   "photo": "images/travel3.jpg",
+   "description": "Salida Colorado"
+},{
+   "album": "travel",
+   "photo": "images/travel4.jpg",
+   "description": "Honest Abe"
+},{
+   "album": "travel",
+   "photo": "images/travel5.jpg",
+   "description": "Penguin crossing in NZ"
+}]
