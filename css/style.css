@@ -1,6 +1,25 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #304246;
+  color: #ccc;
+}
+body ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body a:link {
+  color: #fff;
+  text-decoration: none;
+}
+body a:visited {
+  color: #ccc;
+  text-decoration: none;
+}
+body a:hover {
+  color: ;
+  text-decoration: none;
 }
 .albums_collection {
   margin: 0;
@@ -8,5 +27,4 @@ body {
 }
 .albums_collection h1 {
   font-size: 1em;
-  color: #e19829;
 }

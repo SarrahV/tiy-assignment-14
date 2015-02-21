@@ -1,12 +1,12 @@
-var AlbumDetails = (function(){
+var AlbumGroups = (function(){
 
   var template = JST["albumlist"];
 
-  function AlbumDetails(data) {
+  function AlbumGroups(data) {
     this.data = data;
   }
 
-  AlbumDetails.prototype = {
+  AlbumGroups.prototype = {
 
     render: function() {
       return $( template(this.data) );
@@ -14,18 +14,18 @@ var AlbumDetails = (function(){
 
   }
 
-  return AlbumDetails;
+  return AlbumGroups;
 
 })();
 
-var AlbumDetailsList = (function(){
+var AlbumGroupsList = (function(){
 
-  function AlbumDetailsList(data) {
+  function AlbumGroupsList(data) {
     this.data = data;
     this.$el = $("<ul />");
   }
 
- AlbumDetailsList.prototype = {
+ AlbumGroupsList.prototype = {
     select: function(albumName) {
       this.$el.find("li").removeClass("active");
       this.$el
@@ -36,12 +36,12 @@ var AlbumDetailsList = (function(){
     render: function() {
       var $el = this.$el;
 
-      var group = new AlbumDetails({name: "all"});
+      var group = new AlbumGroups({name: "all"});
       $el.append( group.render() );
 
       _.each(this.data, function(groupData){
 
-        var group = new AlbumDetails(groupData);
+        var group = new AlbumGroups(groupData);
         $el.append( group.render() );
 
       });
@@ -50,7 +50,7 @@ var AlbumDetailsList = (function(){
     }
   }
 
-  return AlbumDetailsList;
+  return AlbumGroupsList;
 
 })();
 
