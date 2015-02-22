@@ -8,9 +8,8 @@ var App = (function() {
     this.$content = $(".content");
 
     this.showAlbums();
-    this.showAlbum();
+    this.showAlbumNames();
     this.showPhotos();
-    this.zoomPhoto();
     this.addListeners();
 
   }
@@ -38,7 +37,7 @@ var App = (function() {
           return photo.album === albumName;
         });
 
-        album.description = photo.description;
+        // album.description = photo.description;
         album.photo_url = photo.photo_url;
 
        });
@@ -79,7 +78,7 @@ var App = (function() {
        return albumNames;
     },
 
-    showAlbum: function(album) { //pulls list items into sidebar
+    showAlbumNames: function(album) { //pulls list items into sidebar
       var albumData = this.getAlbumNames();
       this.albumGroupsList = new AlbumGroupsList(albumData);
       this.$sidebar.html( this.albumGroupsList.render() );
@@ -97,11 +96,34 @@ var App = (function() {
 
     },
 
-    showPhotos: function(albumName) { 
-      var photoData = this.getAlbum(albumName);
-      var pl = new PhotoList(photoData);
-      this.currentAlbum = albumName;
-      this.albumGroupsList.select(albumName);
+    getPhotos: function() {   /// for photos that are in that album
+      var photoThumbs = _.chain(this.data)
+        .pluck("photo_url")
+        .uniq()
+        .map(function(photoThumbs) {
+                      console.log(photoThumbs)
+          return {photo_url: photoThumbs}
+        })
+        .value();
+        
+        var app = this;
+
+       _.each(photoThumbs, function(photo_url) {
+
+        var photoThumbs = photo_url.photo_url;
+
+        });
+
+       console.log(photoThumbs);
+
+       return photoThumbs;
+    },
+
+    showPhotos: function(photoThumbs) { 
+      var photoData = this.getPhotos(photoThumbs);
+      var pl = new PhotoThumbnail(photoData);
+      this.currentPhoto = photoThumbs;
+      this.photoCollectionList.select(photoThumbs);
       this.$content.html( pl.render() );
     },
 
@@ -118,18 +140,19 @@ var App = (function() {
     addListeners: function() {
       var app = this;
 
-       this.$thumb-box.on("click", "div", function(e){
+       this.$content.on("click", ".thumbBox", function(e){
         e.preventDefault();
         $clicked = $(e.currentTarget);
         var indAlbum = $clicked.data("ind-album");
         app.showPhotos(indAlbum);
+        app.showAlbumNames()
       });
 
        this.$sidebar.on("click", "li", function(e){
         e.preventDefault();
         $clicked = $(e.currentTarget);
         var albumName = $clicked.data("list-name");
-        app.showContacts(albumName);
+        app.showPhotos(albumName);
       });
 
     }
