@@ -29,7 +29,7 @@ var AlbumGroupsList = (function(){
     select: function(albumName) {
       this.$el.find("li").removeClass("active");
       this.$el
-        .find("li[data-group-name='"+ albumName +"']")
+        .find("li[data-list-name='"+ albumName +"']")
         .addClass("active");
     },
 

@@ -1,143 +1,129 @@
 [{
-  "group": "myBuick",
-  "album" : "My Buick",
+  "album": "My Buick",
   "photo_id": 1,
   "photo_url": "images/buick/buick1.jpg",
   "description": "Side view. I need to put the original 1963 wheels back on."
 },{
-  "group": "myBuick",
-  "album" : "My Buick",
+  "album": "My Buick",
   "photo_id": 2,
   "photo_url": "images/buick/buick2.jpg",
   "description": "Grill shot. This is a 1965 modified grill, will be replacing with 1963 original grill."
 },{
-  "group": "myBuick",
-  "album" : "My Buick",
+  "album": "My Buick",
   "photo_id": 3,
   "photo_url": "images/buick/buick3.jpg",
   "description": "No work needed here!"
 },{
-  "group": "myBuick",
   "album": "My Buick",
   "photo_id": 4,
   "photo_url": "images/buick/buick4.jpg",
   "description": "I love the lines on this car. It is a work of art."
 },{
-  "group": "max",
   "album": "Max",
   "photo_id": 5,
   "photo_url": "images/max/max1.jpg",
   "description": "My youngest son Max. Around a year old in an outfit his babushka sent from Russia."
 },{
-  "group": "max",
   "album": "Max",
   "photo_id": 6,
   "photo_url": "images/max/max2.jpg",
   "description": "Max at 3 months"
 },{
-  "group": "max",
   "album": "Max",
   "photo_id": 7,
   "photo_url": "images/max/max3.jpg",
   "description": "Max will sleep anywhere."
 },{
-  "group": "max",
   "album": "Max",
   "photo_id": 8,
   "photo_url": "images/max/max4.jpg",
   "description": "Yeah..."
 },{
-  "group": "ni",
   "album": "Ni",
   "photo_id": 9,
   "photo_url": "images/ni/ni1.jpg",
   "description": "My oldest son Ni. He is always making faces"
 },{
-  "group": "ni",
   "album": "Ni",
   "photo_id": 10,
   "photo_url": "images/ni/ni2.jpg",
   "description": "My oldest son Ni at 7 years old."
 },{
-  "group": "ni",
   "album": "Ni",
   "photo_id": 11,
   "photo_url": "images/ni/ni3.jpg",
   "description": "Hahaha...I love taking pictures of them sleeping"
 },{
-  "group": "niAndMax",
   "album": "Ni & Max",
   "photo_id": 12,
   "photo_url": "images/ni-max/ni-max1.jpg",
   "description": "Max graduating from preschool. He always looks up to his brother"
 },{
-  "group": "niAndMax",
   "album": "Ni & Max",
   "photo_id": 13,
   "photo_url": "images/ni-max/ni-max2.jpg",
   "description": "The boys at 3 and 7"
 },{
-   "group": "niAndMax",
    "album": "Ni & Max",
    "photo_id": 14,
    "photo_url": "images/ni-max/ni-max3.jpg",
    "description": "Dorky school photos"
 },{
-   "group": "pepper",
    "album": "Pepper",
    "photo_id": 15,
    "photo_url": "images/pepper/pepper1.jpg",
    "description": "Dorky school photos"
 },{
-   "group": "pepper",
    "album": "Pepper",
    "photo_id": 16,
+   "photo_url": "images/pepper/pepper1.jpg",
+   "description": "My Great Dane Pepper"
+},{
+   "album": "Pepper",
+   "photo_id": 17,
    "photo_url": "images/pepper/pepper2.jpg",
    "description": "Pepper likes to bite her nails"
 },{
-   "group": "pepper",
    "album": "Pepper",
-   "photo_id": 17,
+   "photo_id": 18,
    "photo_url": "images/pepper/pepper3.jpg",
    "description": "Long legs!"
 },{
-   "group": "pepper",
    "album": "Pepper",
-   "photo_id": 18,
+   "photo_id": 19,
    "photo_url": "images/pepper/pepper4.jpg",
    "description": "Dreamy"
 },{
-   "group": "pepper",
    "album": "Pepper",
-   "photo_id": 19,
+   "photo_id": 20,
    "photo_url": "images/pepper/pepper5.jpg",
    "description": "Hard to remember either of them being this small"
 },{
-   "group": "travel",
+   "album": "Pepper",
+   "photo_id": 21,
+   "photo_url": "images/pepper/pepper6.jpg",
+   "description": "Lazy"
+},{
    "album": "Travel",
-   "photo_id": 20,
+   "photo_id": 22,
    "photo_url": "images/travel/travel1.jpg",
    "description": "Flight from Auckland to Wellington NZ"
 },{
-   "group": "travel",
    "album": "Travel",
    "photo_id": 23,
    "photo_url": "images/travel/travel2.jpg",
    "description": "Hindu temple in Atlanta"
 },{
-   "group": "travel",
-   "album": "Travel",
-   "photo_id": 24,
+  "album": "Travel",
+  "photo_id": 24,
    "photo_url": "images/travel/travel3.jpg",
    "description": "Salida Colorado"
 },{
-   "group": "travel",
    "album": "Travel",
    "photo_id": 25,
    "photo_url": "images/travel/travel4.jpg",
    "description": "Honest Abe"
 },{
-   "group": "travel",
    "album": "Travel",
    "photo_id": 26,
    "photo_url": "images/travel/travel5.jpg",
