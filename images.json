@@ -2,13 +2,13 @@
   "group": "myBuick",
   "album" : "My Buick",
   "photo_id": 1,
-  "photo_url": "images/buick/buick1.jpg",
+  "photo_url": "images/buick/buick2.jpg",
   "description": "Side view. I need to put the original 1963 wheels back on."
 },{
   "group": "myBuick",
   "album" : "My Buick",
   "photo_id": 2,
-  "photo_url": "images/buick/buick2.jpg",
+  "photo_url": "images/buick/buick1.jpg",
   "description": "Grill shot. This is a 1965 modified grill, will be replacing with 1963 original grill."
 },{
   "group": "myBuick",

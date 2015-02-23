@@ -8,8 +8,6 @@ var App = (function() {
     this.$content = $(".content");
 
     this.showAlbums();
-    this.showAlbumNames();
-    this.showPhotos();
     this.addListeners();
 
   }
@@ -21,7 +19,9 @@ var App = (function() {
        .pluck("album")
        .uniq()
        .map(function(albumName) {
-                            console.log(albumName);
+
+        console.log(albumName);
+
         return {album: albumName};
        })
        .value();
