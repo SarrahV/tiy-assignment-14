@@ -17,33 +17,28 @@ var PhotoThumbnail = (function() {
 })();
 
 var PhotoCollectionList = (function(){
+  var template = JST["photocoll"];
 
   function PhotoCollectionList(data) {
     this.data = data;
-    this.$el = $("<ul />");
   }
 
   PhotoCollectionList.prototype = {
-    select: function(albumName) {
-      this.$el.find("li").removeClass("active");
-      this.$el
-        .find("li[data-ind-album='"+ albumName +"']")
-        .addClass("active");
-    },
 
     render: function() {
-      var $el = this.$el;
+      var $el = $(template(this.data));
+      var $list = $el.find("ul");
 
-      _.each(this.data, function(groupData){
+      _.filter(this.data, function(album){
 
-        var albumThumbs = new PhotoThumbnail(groupData);
-        $el.append( albumThumbs.render() );
+        var albumThumbs = new PhotoThumbnail(album);
+        $list.append( albumThumbs.render() );
 
       });
 
       return $el;
     }
-  }
+  };
 
   return PhotoCollectionList;
 

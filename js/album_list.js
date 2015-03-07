@@ -19,36 +19,26 @@ var AlbumGroups = (function(){
 })();
 
 var AlbumGroupsList = (function(){
+  var $el = $("<ul />");
 
   function AlbumGroupsList(data) {
     this.data = data;
-    this.$el = $("<ul />");
-  }
+    
+  };
 
  AlbumGroupsList.prototype = {
-    select: function(albumName) {
-      this.$el.find("li").removeClass("active");
-      this.$el
-        .find("li[data-list-name='"+ albumName +"']")
-        .addClass("active");
-    },
 
     render: function() {
-      var $el = this.$el;
+      _.each(this.data, function(album){
 
-      var group = new AlbumGroups({name: "all"});
-      $el.append( group.render() );
-
-      _.each(this.data, function(groupData){
-
-        var group = new AlbumGroups(groupData);
+        var group = new AlbumGroups(album);
         $el.append( group.render() );
 
       });
 
       return $el;
     }
-  }
+  };
 
   return AlbumGroupsList;
 

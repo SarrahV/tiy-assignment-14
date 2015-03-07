@@ -8,37 +8,31 @@ var App = (function() {
     this.$content = $(".content");
 
     this.showAlbums();
+    this.showAlbumNames();
     this.addListeners();
-
+    this.$sidebar.hide();
   }
 
   App.prototype = {
 
     getAlbumData: function() { //gets albums with photo
+      var app = this;
+
       var albumData = _.chain(this.data)
        .pluck("album")
        .uniq()
        .map(function(albumName) {
-
-        console.log(albumName);
-
         return {album: albumName};
        })
        .value();
 
-
-        var app = this;
-
        _.each(albumData, function(album) {
-
         var albumName = album.album;
 
         var photo = _.find(app.data, function(photo) {
           return photo.album === albumName;
         });
-
         album.photo_url = photo.photo_url;
-
        });
 
        return albumData;
@@ -50,114 +44,86 @@ var App = (function() {
       var albumData = this.getAlbumData();
       var collection = new AlbumsCollection(albumData);
 
-      $("body").html( collection.render() );
+        console.log(collection);
+
+      this.$content.html( collection.render() );
+      this.$sidebar.hide();
 
     },
 
-    getAlbumNames: function() {   /// for list in sidebar
-      var albumNames = _.chain(this.data)
-        .pluck("album")
-        .uniq()
-        .map(function(albumNames) {
-                      console.log(albumNames)
-          return {album: albumNames}
-        })
-        .value();
-        
-        var app = this;
-
-       _.each(albumNames, function(album) {
-
-        var albumNames = album.album;
-
-        });
-
-       console.log(albumNames);
-
-       return albumNames;
-    },
-
-    showAlbumNames: function(album) { //pulls list items into sidebar
+    showAlbumNames: function() { //pulls list items into sidebar
       
-      var albumData = this.getAlbumNames();
+      var albumData = this.getAlbumData();
       
-      this.albumGroupsList = new AlbumGroupsList(albumData);
-      
-      this.$sidebar.html( this.albumGroupsList.render() );
-            console.log(albumData);
+      var albumGroupsList = new AlbumGroupsList(albumData);
+      console.log(albumGroupsList);
+      this.$sidebar.append( albumGroupsList.render() );//transition not working
+
     },
 
-    getPhotos: function() {   /// for photos that are in that album
-      var photoThumbs = _.chain(this.data)
-        .pluck("photo_url")
-        .uniq()
-        .map(function(photoThumbs) {
-                      console.log(photoThumbs)
-          return {photo_url: photoThumbs}
-        })
-        .value();
-        
-        var app = this;
-
-       _.each(photoThumbs, function(photo_url) {
-
-        var photoName = photo_url.photo_url;
-                      console.log(photoName);
-
-        var photoHold = _.find(app.data, function(photo) {
-          return photo.description === photoName;
-        });
-
-        photo_url.photo_url = photo_url.photo_url;
-
-        });
-
-                      console.log(photoThumbs);
-
-       return photoThumbs;
-    },
-
-    getPhotoGroup: function(albumName) {
-      return _.filter(this.data, function(album){
-        return album.album === albumName;
-      });
-      console.log(albumName); //no logging
-    },
-
-    showPhotos: function(albumName) { 
-      var photoData = this.getPhotos(albumName);
-      var collection = new PhotoCollectionList(photoData);
-
-      this.$content.html( collection.render());
-      
+    showPhotoThumbs: function(photo) { 
+      var photoData = new PhotoCollectionList(photo);
+      this.$content.html( photoData.render());
+      this.$sidebar.show();
     },
 
     zoomPhoto: function(photoId) {
-      var photoData = _.find(this.data, function(album) {
-        return album.photo_id === photoId;
+      var photoData = _.find(this.data, function(photo) {
+        return photo.photo_id === photoId;
       });
 
       var photo = new PhotoFull(photoData);
-
       this.$content.html( photo.render() );
+
+      $(".album-full a").on("click", function(event){
+        event.preventDefault();
+
+        var currentAlbumPics = photoId.album;
+        app.showPhotoThumbs(currentAlbumPics);
+        console.log(currentAlbumPics);
+      });
+
     },
 
     addListeners: function() {
       var app = this;
 
-       this.$content.on("click", ".thumbBox", function(e){  //supposed to allow click on thumbox to show photos
+       this.$content.on("click", ".thumbBox a", function(e){  //supposed to allow click on thumbox to show photos
         e.preventDefault();
-        $clicked = $(e.currentTarget);
-        var indAlbum = $clicked.data("ind-album");
-        app.showAlbumNames(albumData);
+
+        var $clickedAlbum = $(e.currentTarget);
+
+        var indAlbum = $clickedAlbum.data("album-name");//refers to albumthumb file
+
+        var currentAlbumPics = _.filter(app.data, function(photo) {
+          return photo.album === indAlbum;
+        });
+        app.showPhotoThumbs(currentAlbumPics);
+        console.log(currentAlbumPics);
       });
 
-       this.$sidebar.on("click", "li", function(e){ //supposed to allow click on li to show photos in that album
+       this.$sidebar.on("click", "li a", function(e){ //supposed to allow click on li to show photos in that album
         e.preventDefault();
-        $clicked = $(e.currentTarget);
-        var albumName = $clicked.data("list-name");
-        app.showPhotos(albumName);
+
+        var $clickedName = $(e.currentTarget);
+
+        var albumName = $clickedName.data("list-name");
+
+        var currentAlbumPics = _.filter(app.data, function(photo) {
+          return photo.album === albumName;
+          console.log(currentAlbumPics);
+        });
+
+        app.showPhotoThumbs(currentAlbumPics);
       });
+
+       this.$content.on("click", ".photoThumb a", function(e) {
+          e.preventDefault();
+          $clicked = $(e.currentTarget);
+          var photoId = $clicked.data("photo-id");
+
+          app.zoomPhoto(photoId);
+       });
 
     }
 
@@ -165,3 +131,11 @@ var App = (function() {
   return App;
 
 })();
+
+
+
+
+
+
+
+
