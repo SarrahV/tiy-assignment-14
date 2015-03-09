@@ -40,19 +40,19 @@ h1 {
   float: left;
   font-family: 'Paytone One', sans-serif;
   line-height: 3em;
-  margin-top: 25px;
+  margin: 25px 0 100% 0;
 }
 .sidebar li {
   margin-left: 50px;
 }
-.albums_collection {
+.content .albums_collection {
   height: 100%;
   width: 960px;
   padding: 0;
   text-align: center;
   margin: 0 auto 0 auto;
 }
-.thumbBox {
+.content .thumbBox {
   float: left;
   margin: 20px 30px 20px 30px;
   padding: 25px 25px 50px 25px;
@@ -64,31 +64,43 @@ h1 {
   -moz-box-shadow: -4px 3px 30px -6px rgba(0, 0, 0, 0.75);
   box-shadow: -4px 3px 30px -6px rgba(0, 0, 0, 0.75);
 }
-.thumbBox .sample-photo {
+.content .thumbBox .sample-photo {
   width: 200px;
   height: 200px;
   overflow: hidden;
 }
-.thumbBox .sample-photo img {
+.content .thumbBox .sample-photo img {
   width: auto;
   height: 300px;
 }
-.thumbBox .album-name {
+.content .thumbBox .album-name {
   color: #152d33;
   font-size: 1em;
   padding-top: 15px;
   font-family: 'Shadows Into Light', cursive;
 }
-.photo-collection {
+.content .photo-collection {
   margin-top: 50px;
   height: 100%;
 }
-.photo-collection .photoThumb {
+.content .photo-collection .photoThumb {
   float: left;
   border: 20px solid #fff;
   margin: 0 20px 20px 20px;
+  background-color: #fff;
 }
-.photo-collection .photoThumb img {
+.content .photo-collection .photoThumb img {
   width: 300px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.content .album-full {
+  width: 500px;
+  float: left;
+  margin: 35px 0 0 200px;
+}
+.content .album-full img {
+  width: 500px;
   height: auto;
 }

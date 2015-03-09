@@ -3,13 +3,13 @@
   "album" : "My Buick",
   "photo_id": 1,
   "photo_url": "images/buick/buick2.jpg",
-  "description": "Side view. I need to put the original 1963 wheels back on."
+  "description": "Grill shot. This is a 1965 modified grill, will be replacing with 1963 original grill."
 },{
   "group": "myBuick",
   "album" : "My Buick",
   "photo_id": 2,
   "photo_url": "images/buick/buick1.jpg",
-  "description": "Grill shot. This is a 1965 modified grill, will be replacing with 1963 original grill."
+  "description": "I love the lines on this car. It is a work of art."
 },{
   "group": "myBuick",
   "album" : "My Buick",
@@ -21,7 +21,7 @@
   "album": "My Buick",
   "photo_id": 4,
   "photo_url": "images/buick/buick4.jpg",
-  "description": "I love the lines on this car. It is a work of art."
+  "description": "Side view. I need to put the original 1963 wheels back on."
 },{
   "group": "max",
   "album": "Max",
@@ -67,15 +67,15 @@
 },{
   "group": "niAndMax",
   "album": "Ni & Max",
-  "photo_id": 12,
-  "photo_url": "images/ni-max/ni-max1.jpg",
-  "description": "Max graduating from preschool. He always looks up to his brother"
-},{
-  "group": "niAndMax",
-  "album": "Ni & Max",
   "photo_id": 13,
   "photo_url": "images/ni-max/ni-max2.jpg",
   "description": "The boys at 3 and 7"
+},{
+  "group": "niAndMax",
+  "album": "Ni & Max",
+  "photo_id": 12,
+  "photo_url": "images/ni-max/ni-max1.jpg",
+  "description": "Max graduating from preschool. He always looks up to his brother"
 },{
    "group": "niAndMax",
    "album": "Ni & Max",
@@ -85,21 +85,15 @@
 },{
    "group": "pepper",
    "album": "Pepper",
-   "photo_id": 15,
-   "photo_url": "images/pepper/pepper1.jpg",
-   "description": "Dorky school photos"
+   "photo_id": 17,
+   "photo_url": "images/pepper/pepper3.jpg",
+   "description": "Long legs!"
 },{
    "group": "pepper",
    "album": "Pepper",
    "photo_id": 16,
    "photo_url": "images/pepper/pepper2.jpg",
    "description": "Pepper likes to bite her nails"
-},{
-   "group": "pepper",
-   "album": "Pepper",
-   "photo_id": 17,
-   "photo_url": "images/pepper/pepper3.jpg",
-   "description": "Long legs!"
 },{
    "group": "pepper",
    "album": "Pepper",

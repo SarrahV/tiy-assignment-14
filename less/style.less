@@ -39,7 +39,6 @@ h1 {
   padding-top: 20px;
 }
 
-
   .sidebar {
     width: 200px;
     height: 100%;
@@ -47,14 +46,16 @@ h1 {
     float: left;
     font-family: 'Paytone One', sans-serif;
     line-height: 3em;
-    margin-top: 25px;
+    margin: 25px 0 100% 0;
 
     li {
       margin-left: 50px;
     }
   }
 
-.albums_collection {
+.content {
+
+  .albums_collection { //page 1
     height: 100%;
     width: 960px;
     padding: 0;
@@ -62,55 +63,69 @@ h1 {
     margin: 0 auto 0 auto;
   }
 
-.thumbBox {
-  float: left;
-  margin: 20px 30px 20px 30px;
-  padding: 25px 25px 50px 25px;
-  text-align: center;
-  height: 200px;
-  width: 200px;
-  background-color: #fff;
-  -webkit-box-shadow: -4px 3px 30px -6px rgba(0,0,0,0.75);
-  -moz-box-shadow: -4px 3px 30px -6px rgba(0,0,0,0.75);
-  box-shadow: -4px 3px 30px -6px rgba(0,0,0,0.75);
+  .thumbBox { //thumb page 1
+    float: left;
+    margin: 20px 30px 20px 30px;
+    padding: 25px 25px 50px 25px;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    background-color: #fff;
+    -webkit-box-shadow: -4px 3px 30px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 3px 30px -6px rgba(0,0,0,0.75);
+    box-shadow: -4px 3px 30px -6px rgba(0,0,0,0.75);
 
     .sample-photo {
       width: 200px;
       height: 200px;
       overflow: hidden;
 
-        img {
-          width: auto;
-          height: 300px;
-        }
+      img {
+        width: auto;
+        height: 300px;
+      }
     }
-    .album-name {
+
+    .album-name { //page 1 list
       color: #152d33;
       font-size: 1em;
       padding-top: 15px;
       font-family: 'Shadows Into Light', cursive;
       
     }
-}
-
-.photo-collection {
-  margin-top: 50px;
-  height: 100%;
-
-
-  .photoThumb {
-  float: left;
-  border: 20px solid #fff;
-  margin: 0 20px 20px 20px;
-
-    img {
-      width: 300px;
-      height: auto;
-    }
-
   }
 
-}
+  .photo-collection {
+    margin-top: 50px;
+    height: 100%;
+
+    .photoThumb {
+      float: left;
+      border: 20px solid #fff;
+      margin: 0 20px 20px 20px;
+      background-color: #fff;
+
+      img {
+        width: 300px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .album-full {
+    width: 500px;
+    float: left;
+    margin: 35px 0 0 200px;
+    img {
+      width: 500px;
+      height: auto;
+    }
+  }
+} //end content
+
+
 
 
 
