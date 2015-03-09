@@ -33,15 +33,15 @@ this["JST"]["photofull"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"]
     + escapeExpression(((helper = (helper = helpers.album || (depth0 != null ? depth0.album : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"album","hash":{},"data":data}) : helper)))
     + "\">Back to "
     + escapeExpression(((helper = (helper = helpers.album || (depth0 != null ? depth0.album : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"album","hash":{},"data":data}) : helper)))
-    + "</a></div>\n  <div class=\"photo\">\n    <img src=\""
+    + "</a></div>\n  <div class=\"image\">\n    <img src=\""
     + escapeExpression(((helper = (helper = helpers.photo_url || (depth0 != null ? depth0.photo_url : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"photo_url","hash":{},"data":data}) : helper)))
     + "\" alt=\""
     + escapeExpression(((helper = (helper = helpers.album || (depth0 != null ? depth0.album : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"album","hash":{},"data":data}) : helper)))
-    + "\">\n  </div>\n  <div class=\"info\">\n    <table>\n      <tr>\n        <th>Album:</th>\n        <td>"
+    + "\">\n  </div>\n  <div class=\"info\">\n    <div class=\"album\">\n      <h2>Album:</h2>\n      <p>"
     + escapeExpression(((helper = (helper = helpers.album || (depth0 != null ? depth0.album : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"album","hash":{},"data":data}) : helper)))
-    + "</td>\n      </tr>\n      <tr>\n        <th>Description:</th>\n        <td>"
+    + "</p>\n    </div>\n    <div class=\"description\">\n      <h2>Description:</h2>\n      <p>"
     + escapeExpression(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"description","hash":{},"data":data}) : helper)))
-    + "</td>\n      </tr>\n    </table>\n  </div>\n</div>\n";
+    + "</p>\n    </div>\n  </div>\n</div>\n";
 },"useData":true});
 this["JST"] = this["JST"] || {};
 this["JST"]["photothumb"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

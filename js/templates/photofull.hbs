@@ -2,19 +2,17 @@
 
 <div class="album-full">
   <div class="back_button"><a href="#" data-list-name="{{album}}">Back to {{album}}</a></div>
-  <div class="photo">
+  <div class="image">
     <img src="{{photo_url}}" alt="{{album}}">
   </div>
   <div class="info">
-    <table>
-      <tr>
-        <th>Album:</th>
-        <td>{{album}}</td>
-      </tr>
-      <tr>
-        <th>Description:</th>
-        <td>{{description}}</td>
-      </tr>
-    </table>
+    <div class="album">
+      <h2>Album:</h2>
+      <p>{{album}}</p>
+    </div>
+    <div class="description">
+      <h2>Description:</h2>
+      <p>{{description}}</p>
+    </div>
   </div>
 </div>
