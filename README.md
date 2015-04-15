@@ -13,3 +13,5 @@ JS dependencies must be loaded via bower and be included as a dependency via bow
 Styles should be defined via LESS and compiled to CSS via Gulp
 Templates should be handlebars and compiled to templates.js via Gulp
 Gallery is data driven via loading JSON with Ajax
+
+http://sarrahv.github.io/tiy-assignment-14/
